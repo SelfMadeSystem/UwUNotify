@@ -1,0 +1,35 @@
+# Place holders for no_permission and list: %sender% %date%
+# Place holders for no_type: %sender% %type% %date%
+# Place holders for list_format: %sender% %type% %alias% %date%
+
+# Certain messages done when command executed.
+messages:
+  # Message done when sender tries to do a command they do not have access to.
+  no_permission: "&e&l[&6UwUNotify&e&l] &cYou do not have access to that command."
+  # Message done when specified type does not exist.
+  no_type: "&e&l[&6UwUNotify&e&l] &cThere is no type %type%."
+  # Message done when sender requests list of all types.
+  list: "&e&l[&6UwUNotify&e&l] &7List of types:"
+  # Format per type.
+  list_format: "-&7%type% &raliases: &7%alias%"
+
+# Message format. Example:
+# In config: message: "1: %1% 2: %2% 3+: %3+%"
+# Sender executed command: /notify (type) that cat is quite cute
+# %1% will be replaced with 'that'. %2% will be replaced with 'cat', and so on.
+# %3+% will be replaced with 'is quite cute'
+
+# Types of notifications.
+types:
+  # Name of type.
+  zero:
+    # Aliases for this type.
+    alias:
+      - zero
+      - 0
+    # Message for this type.
+    message: "&6&lZero &8» &e%1% &7has failed &e%2% &8(&7Type: &e%3%&8)"
+    # Permission that players must have to see this notification.
+    permission_see: "zero.alerts"
+    # Permission that sender must have to use this notification.
+    permission_use: "zero.alerts.send"

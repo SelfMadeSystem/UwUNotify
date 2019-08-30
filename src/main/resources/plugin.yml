@@ -1,0 +1,13 @@
+name: UwUNotify
+version: ${project.version}
+main: uwu.smsgamer.uwunotify.UwUNotify
+api-version: 1.13
+authors: [Sms_Gamer]
+description: An advanced notification plugin.
+commands:
+  notify:
+    usage: /notify [args]
+permissions:
+  UwU.Notify.commands:
+    description: Allows to use commands.
+    default: op
