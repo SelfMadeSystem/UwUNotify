@@ -19,12 +19,32 @@ public class ChatUtils {
         fmsg = fmsg.replaceAll("_=-fa", "&");
         return fmsg;
     }
+
+    /**
+     * Edits placeholders for a message.
+     *
+     * @param msg The message that will be edited.
+     * @param sender String to replace %sender%
+     * @param date String to replace %date%
+     * @return Will return a string with certain placeholders replaced.
+     */
     public static String basicReplace(String msg, String sender, String date){
         String m = msg;
         m = m.replaceAll("%sender%", sender);
         m = m.replaceAll("%date%", date);
         return m;
     }
+
+    /**
+     * Edits placeholders for a message.
+     *
+     * @param msg The message that will be edited.
+     * @param sender String to replace %sender%
+     * @param type String to replace %type%
+     * @param alias String to replace %alias%
+     * @param date String to replace %date%
+     * @return Will return a string with certain placeholders replaced.
+     */
     public static String listReplace(String msg, String type, String alias, String sender, String date){
         String m = msg;
         m = m.replaceAll("%type%", type);

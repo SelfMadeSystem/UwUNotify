@@ -16,4 +16,5 @@ public class Vars {
     public static String list = ChatUtils.colorize((String) UwUNotify.instance.getConfig().get("messages.list"));
     public static String listFormat = ChatUtils.colorize((String) UwUNotify.instance.getConfig().get("messages.list_format"));
     public static String noType = ChatUtils.colorize((String) UwUNotify.instance.getConfig().get("messages.no_type"));
+    public static String noPlayer = ChatUtils.colorize((String) UwUNotify.instance.getConfig().get("messages.no_player"));
 }

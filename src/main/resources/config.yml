@@ -8,6 +8,8 @@ messages:
   no_permission: "&e&l[&6UwUNotify&e&l] &cYou do not have access to that command."
   # Message done when specified type does not exist.
   no_type: "&e&l[&6UwUNotify&e&l] &cThere is no type %type%."
+  # Message done when specified player does not exist.
+  no_player: "&e&l[&6UwUNotify&e&l] &cThere is no player %type%."
   # Message done when sender requests list of all types.
   list: "&e&l[&6UwUNotify&e&l] &7List of types:"
   # Format per type.
