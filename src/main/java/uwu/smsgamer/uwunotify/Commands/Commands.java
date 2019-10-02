@@ -52,8 +52,17 @@ public class Commands implements CommandExecutor {
                 boolean kicks;
                 String msg = ChatUtils.colorize(UwUNotify.instance.getConfig().getString("types." + num + ".message"));
                 Player p = null;
+                if(args.length <= 1) {
+                    Bukkit.broadcast(msg, UwUNotify.instance.getConfig().getString("types." + num + ".permission_see"));
+                    return true;
+                }
                 if(args[1].equalsIgnoreCase("kick")){
-                   p = Bukkit.getPlayer(args[2]);
+                    try {
+                        p = Bukkit.getPlayer(args[2]);
+                    }catch (IndexOutOfBoundsException e){
+                        sender.sendMessage(ChatUtils.basicReplace(Vars.noPlayerSpecified, sender.getName(), Vars.time));
+                        return true;
+                    }
                     if(p == null){
                         sender.sendMessage(ChatUtils.listReplace(Vars.noPlayer, args[2], "%alias%", sender.getName(), Vars.time));
                         return true;

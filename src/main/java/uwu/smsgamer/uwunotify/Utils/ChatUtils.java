@@ -17,7 +17,7 @@ public class ChatUtils {
         fmsg = fmsg.replaceAll("&&", "_=-fa");
         fmsg = fmsg.replaceAll("&", String.valueOf(ChatColor.COLOR_CHAR));
         fmsg = fmsg.replaceAll("_=-fa", "&");
-        return fmsg;
+        return fmsg.trim();
     }
 
     /**
@@ -32,7 +32,7 @@ public class ChatUtils {
         String m = msg;
         m = m.replaceAll("%sender%", sender);
         m = m.replaceAll("%date%", date);
-        return m;
+        return m.trim();
     }
 
     /**
@@ -51,6 +51,6 @@ public class ChatUtils {
         m = m.replaceAll("%sender%", sender);
         m = m.replaceAll("%alias%", alias);
         m = m.replaceAll("%date%", date);
-        return m;
+        return m.trim();
     }
 }
